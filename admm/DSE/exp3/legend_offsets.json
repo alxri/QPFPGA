@@ -1,0 +1,21 @@
+{
+  "bram_vs_latency_high": {
+    "loc": "center left",
+    "bbox_anchor": [0.04, 0.45]
+  },
+  "bram_vs_latency_low_under5s": {
+    "loc": "lower left",
+    "bbox_anchor": [0.04, 0.3]
+  },
+  "bram_vs_latency_medium_under8s": {
+    "loc": "upper left",
+    "bbox_anchor": [0.04, 0.98]
+  },
+  "bram_vs_latency_medium_under8s_pareto": {
+    "loc": "upper left",
+    "bbox_anchor": [0.04, 0.98]
+  },
+  "default": {
+    "loc": "upper right"
+  }
+}

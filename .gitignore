@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv_bench/
+
+# Git submodules are handled separately
+# (don't ignore them)
+
+# Build
+build/
+dist/
+vivado_build/
+admm_HW_HLS/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store

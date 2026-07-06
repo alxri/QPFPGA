@@ -1,0 +1,56 @@
+xilinx@pynq:~/power$ sudo ./admm_test 
+Loading overlay from /home/xilinx/admm/admm_fixed_tiles.bit...
+Overlay loaded!
+
+Loading QP data from: ./data_bin/
+Problem size: 2048 x 2048
+
+Applying Ruiz Equilibration...
+
+Slicing and Allocating Tiled Matrices... (This may take a moment)
+  Tiling Matrix A...
+  Tiling Matrix AT...
+  Tiling Matrix P...
+
+=== HW Run (adaptive_rho=0) ===
+Power Measurements (Watts):
+  FPGA Core Logic: 3 W
+  FPGA AUX:        2 W
+  FPGA Total:      5 W
+  Board Total:     12.587 W
+
+HW execution time: 12028.1817 ms
+Status: Converged
+ADMM Iterations: 345
+PCG Iterations : 1725 (Average pcg/admm: 5.0)
+Primal Residual: 6.86874e-02
+Dual Residual  : 2.57927e-02
+Objective Value: 7.155014e+02
+Max Violation  : 2.692e-03
+
+=== HW Run (adaptive_rho=1) ===
+Power Measurements (Watts):
+  FPGA Core Logic: 3 W
+  FPGA AUX:        2 W
+  FPGA Total:      5 W
+  Board Total:     12.687 W
+
+HW execution time: 9158.2787 ms
+Status: Converged
+ADMM Iterations: 260
+PCG Iterations : 1300 (Average pcg/admm: 5.0)
+Primal Residual: 5.19839e-02
+Dual Residual  : 2.20993e-02
+Objective Value: 7.154944e+02
+Max Violation  : 5.198e-02
+
+=== Summary ===
+ADMM iterations: off=345 | on=260
+PCG iterations:  off=1725 | on=1300
+Primal residual: off=6.869e-02 | on=5.198e-02
+Dual residual:   off=2.579e-02 | on=2.210e-02
+Violation:       off=2.692e-03 | on=5.198e-02
+Objective:       off=7.155014e+02 | on=7.154944e+02
+HW time (ms):    off=12028.182 | on=9158.279
+
+Buffers released.

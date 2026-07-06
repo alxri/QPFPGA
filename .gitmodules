@@ -1,0 +1,9 @@
+[submodule "QPFPGA/cpp/src/pmt"]
+	path = QPFPGA/cpp/src/pmt
+	url = https://github.com/alxri/pmt-fork.git
+[submodule "QPFPGA/benchmarks/osqp_benchmarks"]
+	path = QPFPGA/benchmarks/osqp_benchmarks
+	url = https://github.com/alxri/osqp_benchmarks.git
+[submodule "admm/jupyter/power/pmt"]
+	path = admm/jupyter/power/pmt
+	url = https://github.com/alxri/pmt-fork.git
