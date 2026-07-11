@@ -1,6 +1,8 @@
 # QPFPGA: FPGA-Accelerated QP Solver
 
-A quadratic programming (QP) solver library combining Vitis HLS FPGA acceleration with a CVXPY-integrated Python interface for solving convex optimization problems on FPGA hardware.
+A Quadratic Programming (QP) solver library combining Vitis HLS FPGA acceleration with a CVXPY-integrated Python interface for solving convex optimization problems on FPGA hardware.
+
+> **Note:** this repository contains the final version of the project. The complete development history with intermediate prototypesand experiments is available in the [original development repository](https://github.com/alxri/QP).
 
 ## Repository Structure
 
@@ -10,10 +12,9 @@ This repository contains two main components:
 Vitis HLS and Vivado sources for building the ADMM-based QP solver FPGA accelerator.
 
 **Key contents:**
-- `HLS/` – HLS kernel sources, sparse linear algebra kernels, and testbenches
-- `DSE/` – Design-space exploration (PE count, reshape factor, problem size sweeps)
+- `HLS/` – HLS kernel sources: ADMM and PCG modules, SpMV engine
+- `DSE/` – Design Space Exploration (PE count, reshape factor, complete exploration)
 - `scripts/` – Tcl automation for HLS synthesis and Vivado implementation
-- `bitstreams/` – Generated bitstreams for various configurations
 
 This is where you build, optimize, and validate the FPGA design. See [admm/README.md](admm/README.md) for build instructions and [admm/HLS/README.md](admm/HLS/README.md) for kernel details.
 
@@ -23,9 +24,9 @@ Python package and C++ backend for FPGA-accelerated QP solving via CVXPY.
 **Key contents:**
 - `qpfpga/` – Python package with CVXPY solver interface and backend selection
 - `cpp/` – C++ shared-library backend (`libqpfpga.so`) for FPGA runtime
-- `examples/` – End-to-end demo using CVXPY
+- `examples/` – Demo using CVXPY
 - `benchmarks/` – Benchmark suite for CPU/FPGA performance comparison
-- `bitstreams/` – Pre-built bitstreams for runtime deployment
+- `bitstreams/` – Pre-built bitstreams for heuristic table based on DSE performance (Pareto Optimal) for runtime deployment
 
 **For solver users:** Install this package to solve QP problems using CVXPY with FPGA acceleration. See [QPFPGA/README.md](QPFPGA/README.md) for installation and usage.
 
