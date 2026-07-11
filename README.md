@@ -2,6 +2,8 @@
 
 A Quadratic Programming (QP) solver library combining Vitis HLS FPGA acceleration with a CVXPY-integrated Python interface for solving convex optimization problems on FPGA hardware.
 
+> **Note:** this repository contains the final version of the project. The complete development history with intermediate prototypesand experiments is available in the [original development repository](https://github.com/alxri/QP).
+
 ## Repository Structure
 
 This repository contains two main components:
